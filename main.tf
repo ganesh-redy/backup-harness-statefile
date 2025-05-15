@@ -11,7 +11,7 @@ output "name" {
 */
 provider "google" {
   project = "sam-458313"
-  region  = "us-central1"        # ❌ Fixed typo: 'us-cebtral1' → 'us-central1'
+  region  = "us-central1"
   zone    = "us-central1-b"
 }
 
@@ -27,7 +27,7 @@ resource "google_compute_instance" "inst" {
   }
 
   network_interface {
-    network = "default"          # ✅ Ensure a network is specified (default is fine)
-    access_config {}             # Required for external IP
+    network = "default"
+    access_config {}
   }
 }
